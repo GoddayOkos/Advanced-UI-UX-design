@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstTask">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/taLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_600"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/toolbar_menu_icon"
+            android:contentDescription="@string/toolbar_menu_desc"
+            style="@style/toolbar_item"
+            android:src="@drawable/ic_outline_clear_all_24" />
+
+        <TextView
+            style="@style/toolbar_item"
+            android:layout_marginEnd="30dp"
+            android:textSize="20sp"
+            android:text="@string/home_page"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/toolbar_notification_icon"
+                style="@style/toolbar_item"
+                android:contentDescription="@string/toolbar_notification_desc"
+                android:src="@drawable/ic_outline_notifications_active_24" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_bg_blue"
+                android:layout_gravity="top|end"
+                android:paddingHorizontal="5dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:text="@string/notification_tag"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/toolbar_user_icon"
+            style="@style/toolbar_item"
+            android:contentDescription="@string/toolbar_user_desc"
+            android:src="@drawable/ic_person" />
+
+        <ImageView
+            android:id="@+id/toolbar_settings_icon"
+            style="@style/toolbar_item"
+            android:contentDescription="@string/toolbar_settings_desc"
+            android:src="@drawable/ic_outline_settings_24" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/taLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/view_pager_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_600"
+                android:orientation="vertical"
+                android:paddingVertical="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="30dp"
+                    app:layout_constraintHorizontal_bias="0.5" />
+
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/grid_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@color/background_color"
+                app:layout_constraintTop_toBottomOf="@id/view_pager_container">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="10dp"
+                    android:rowCount="2">
+
+                    <androidx.cardview.widget.CardView style="@style/my_card_view">
+                        <TextView
+                            style="@style/CardView.Text"
+                            android:text="@string/text_agenda"
+                            app:drawableTopCompat="@drawable/ic_outline_insert_invitation_24" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView style="@style/my_card_view">
+
+                        <TextView
+                            style="@style/CardView.Text"
+                            android:text="@string/text_speakers"
+                            app:drawableTopCompat="@drawable/ic_outline_group_24" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView style="@style/my_card_view">
+
+                        <TextView
+                            style="@style/CardView.Text"
+                            android:text="@string/text_sponsors"
+                            app:drawableTopCompat="@drawable/ic_outline_clean_hands_24" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView style="@style/my_card_view">
+
+                        <TextView
+                            style="@style/CardView.Text"
+                            android:text="@string/text_exhibitors"
+                            app:drawableTopCompat="@drawable/ic_outline_storefront_24" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView style="@style/my_card_view">
+
+                        <TextView
+                            style="@style/CardView.Text"
+                            android:text="@string/text_contact_us"
+                            app:drawableTopCompat="@drawable/ic_outline_email_24" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView style="@style/my_card_view">
+
+                        <TextView
+                            style="@style/CardView.Text"
+                            android:text="@string/text_map"
+                            app:drawableTopCompat="@drawable/ic_outline_map_24" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/tweets_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/purple_600"
+                    android:textSize="18sp"
+                    android:text="@string/twitter_feeds"
+                    android:textStyle="bold"
+
+                    app:layout_constraintVertical_bias="0.005" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/twitter_feeds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/card_view_clone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">JG Android Group</string>
+    <string name="first_task">First Task</string>
+    <string name="second_task">Second Task</string>
+    <string name="text_agenda">Agenda</string>
+    <string name="text_speakers">Speakers</string>
+    <string name="text_sponsors">Sponsors</string>
+    <string name="text_exhibitors">Exhibitors</string>
+    <string name="text_contact_us">Contact Us</string>
+    <string name="text_map">Map</string>
+    <string name="twitter_feeds">Twitter Feeds</string>
+    <string name="days">  Days </string>
+    <string name="hours"> Hours </string>
+    <string name="minutes">Minutes</string>
+    <string name="home_page">Home Page</string>
+    <string name="toolbar_notification_desc">toolbar notification</string>
+    <string name="toolbar_menu_desc">toolbar menu</string>
+    <string name="toolbar_settings_desc">toolbar settings</string>
+    <string name="_18_march_2018">18 March 2018</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</string>
+    <string name="round_bullet">round bullet</string>
+    <string name="toolbar_user_desc">toolbar user</string>
+    <string name="border_line">border line</string>
+    <string name="use_pin_code">Use Pin Code</string>
+    <string name="reports">Reports</string>
+    <string name="employee">Employee</string>
+    <string name="admin">Admin</string>
+    <string name="look">Look</string>
+    <string name="show_time">Show Time</string>
+    <string name="show_date">Show Date</string>
+    <string name="fullscreen_icon">fullscreen icon</string>
+    <string name="camera_flip_icon">camera flip icon</string>
+    <string name="notification_tag">14</string>
+</resources>
